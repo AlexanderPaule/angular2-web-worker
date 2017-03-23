@@ -1,0 +1,21 @@
+#container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: #aaaaaa;
+	font-family: Verdana;
+}
+.subcontainer {
+	position: absolute;
+	top: 15vh;
+	left: 30vw;
+	width: 40vw;
+}
+.element {
+	width: 100%;
+	text-align: left;
+	padding-bottom: 0.5vh;
+}
