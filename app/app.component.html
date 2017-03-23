@@ -1,0 +1,28 @@
+<div id="container">
+	<h2>Calculating Fibonacci</h2>
+	<h4>Demo Using Web Worker</h4>
+    <div class="subcontainer">
+        <form (ngSubmit)='startWebWorkerCalculation()'>
+	        <div class="element">
+		        <span>calculate fib(n) from</span>
+		        <input type='number' [(ngModel)]='webWorkerStart' name='webWorkerStart' />
+	        </div>
+	        <div class="element">
+		        <span>to:</span>
+		        <input type='number' [(ngModel)]='webWorkerEnd' name='webWorkerEnd' />
+	        </div>
+	        <div class="element">
+	        	<button type='submit'>Start</button>
+		        <button type='button' (click)='stopWebWorkerCalculation()'>Stop</button>
+		        <button type='button' (click)='reset()'>Reset</button>
+	        </div>
+        </form>
+        <div>
+		    <p *ngFor='let result of webWorkerResults'>
+		        fib({{ result.number }}) = 
+		        <span *ngIf='result.loading' class='spin-me-baby'> Loading... </span>
+		        <span *ngIf='!result.loading'>{{ result.result }}</span> 
+		    </p>
+	    </div>
+	</div>
+</div>
