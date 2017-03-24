@@ -4,7 +4,7 @@ import { WebWorkerService } from './worker/web-worker';
 
 @Injectable()
 export class FibonacciWorker extends WebWorkerService {
-    public calculate( n: number ): Result {
+    public calculate( n: number ): { result: Result, promise: any } {
         let promise = this.run(this.fib, n);
         let result = new Result(n, 0, true);
 
@@ -13,7 +13,7 @@ export class FibonacciWorker extends WebWorkerService {
             result.loading = false;
         });
 
-        return result;
+        return { result: result, promise: promise };
     }
     private fib( n: number ) {
         let fib = (n: number): number => {
