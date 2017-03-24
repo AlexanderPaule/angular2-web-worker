@@ -9,3 +9,7 @@ The example no need specific installation, the real util code is in "app" direct
 -service/fibonacci-worker.service.ts
 
 -service/worker/worker.ts
+
+# Demo
+
+https://alexanderpaule.github.io/angular2-web-worker/
