@@ -19,7 +19,7 @@
         </form>
         <div>
 		    <p *ngFor='let result of webWorkerResults'>
-		        fib({{ result.number }}) = 
+		        fib({{ result.number + 1 }}) = 
 		        <span *ngIf='result.loading' class='spin-me-baby'> Loading... </span>
 		        <span *ngIf='!result.loading'>{{ result.result }}</span> 
 		    </p>
