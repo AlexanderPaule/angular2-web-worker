@@ -4,12 +4,9 @@ Simple example of Web Worker in Angular 2, implemented as a Service, that calcul
 
 The example no need specific installation, the real util code is in "app" directory.
 
--app-component.ts
-
--service/fibonacci-worker.service.ts
-
--service/worker/worker.ts
+- service/fibonacci-worker.service.ts
+- service/worker/worker.ts
 
 # Demo
 
-https://alexanderpaule.github.io/angular2-web-worker/
+For demostration <a href="https://alexanderpaule.github.io/angular2-web-worker/">run demo</a>
