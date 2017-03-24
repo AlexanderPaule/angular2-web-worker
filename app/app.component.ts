@@ -25,11 +25,18 @@ export class AppComponent{
     // ************************************************* controllers
     private startWebWorkerCalculation() {
         this.initialize();
-        let pointer = Math.floor( this.webWorkerStart );
+        let pointer: number = Math.floor( this.webWorkerStart );
+        let end: number = Math.floor( this.webWorkerEnd ) + 1;
 
         this.stopWebWorkerCalculation();
-        while( pointer <= this.webWorkerEnd ) {
-            let resp: { results: Result, promise: any } = this.worker.calculate( pointer );
+        if( pointer < 0 )
+            pointer = 0;
+        if( pointer == 0 ) {
+            this.webWorkerResults.push( new Result( -1, 0, false ) );
+            pointer++;
+        }
+        while( pointer < end ) {
+            let resp: { results: Result, promise: any } = this.worker.calculate( pointer - 1 );
             this.webWorkerResults.push( resp.results );
             this.promises.push( resp.promise );
             pointer++;
