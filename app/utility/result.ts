@@ -1,3 +1,4 @@
+// ******************************************************** Result Container, wait promising resolve
 export class Result {
     public number: number;
     public result: number;
