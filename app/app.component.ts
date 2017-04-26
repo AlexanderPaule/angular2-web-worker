@@ -49,6 +49,7 @@ export class AppComponent{
                 this.webWorkerResults.splice( i, 1 );
         }
     }
+
     private reset() {
         this.webWorkerStart = 35;
         this.webWorkerEnd = 42;
