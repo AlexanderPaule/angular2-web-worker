@@ -29,8 +29,9 @@ export class AppComponent{
         let end: number = Math.floor( this.webWorkerEnd ) + 1;
 
         this.stopWebWorkerCalculation();
-        if( pointer < 0 )
+        if( pointer < 0 ) {
             pointer = 0;
+        }
         if( pointer == 0 ) {
             this.webWorkerResults.push( new Result( -1, 0, false ) );
             pointer++;
